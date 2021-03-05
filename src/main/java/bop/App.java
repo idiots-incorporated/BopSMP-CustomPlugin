@@ -7,6 +7,8 @@ public class App extends JavaPlugin {
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new Cookie(), this);
         getServer().getPluginManager().registerEvents(new Excalibur(), this);
+        getServer().getPluginManager().registerEvents(new LaofieTeleport(), this);
+        getServer().getPluginManager().registerEvents(new Netherborn(), this);
         getLogger().info("BopSMP Plugin is activating!");
     }
     @Override
