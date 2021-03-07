@@ -16,9 +16,9 @@ public class Infinitotem implements Listener{
         Player p = (Player)event.getEntity();
         if(event.getEntity().getUniqueId().toString().equals("d44e3103-2a77-4181-a846-2790e2c08a6c") && p.getHealth() - event.getDamage() < 1){
             p.setHealth(20);
-            p.getWorld().playEffect(p.getLocation(), Effect.WITHER_SHOOT,null);
-            for(double i = 0; i<5; i++){
-            p.getWorld().playEffect(p.getLocation().add(0, i/2, 0), Effect.ENDER_SIGNAL, null);
+            p.getWorld().playEffect(p.getLocation(), Effect.WITHER_SHOOT, null);
+            for(double i = 0; i<3; i++){
+            p.getWorld().playEffect(p.getLocation().add(0, i, 0), Effect.ENDER_SIGNAL, null);
             }
             event.setCancelled(true);            
 
