@@ -8,9 +8,10 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 public class LaofieTeleport implements Listener {
     @EventHandler
+    UUIDList listOfPlayers = new UUIDList();
     public void onRightClick(PlayerInteractEvent event) {
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (event.getPlayer().getUniqueId().toString().equals("96ea7e72-53aa-4bf6-8c65-f9244bf15768") && event.getItem().getType().equals(Material.COMPASS)) {
+            if (event.getPlayer().getUniqueId().toString().equals(listOfPlayers.LaofieUUID) && event.getItem().getType().equals(Material.COMPASS)) {
                 event.getPlayer().chat("/world world_nether");
             }
         }

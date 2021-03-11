@@ -7,8 +7,9 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class Netherborn implements Listener{
-    String laofie = "96ea7e72-53aa-4bf6-8c65-f9244bf15768";
-    String linguine = "c8dba6a8-1c0b-4f17-ba1b-42aaec0b0839";
+    public UUIDList listOfPlayers = new UUIDList();
+    String laofie = listOfPlayers.LaofieUUID;
+    String linguine = listOfPlayers.LinguineUUID;
     PotionEffect speed2 = new PotionEffect(PotionEffectType.SPEED, 300, 1);
     PotionEffect regen = new PotionEffect(PotionEffectType.REGENERATION, 300, 0);
     @EventHandler
