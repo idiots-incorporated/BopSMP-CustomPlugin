@@ -7,11 +7,11 @@ import org.bukkit.entity.Player;
 
 public class Cookie implements Listener {
     @EventHandler
-
+    public UUIDList listOfPlayers = new UUIDList();
     public void onPlayerItemConsumption(PlayerItemConsumeEvent cookieEat) {
         Player p = cookieEat.getPlayer();
         if (cookieEat.getItem().getType().toString().equals("COOKIE")
-                && p.getUniqueId().toString().equals("ae22051d-1226-4b76-a8d3-2b07a341f2ec")) {
+                && p.getUniqueId().toString().equals(listOfPlayers.idkwhothefuckthisis)) {
             p.setHealth(0);
         }
     }

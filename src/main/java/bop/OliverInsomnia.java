@@ -5,9 +5,10 @@ import org.bukkit.event.player.PlayerBedEnterEvent;
 
 public class OliverInsomnia implements Listener {
     @EventHandler
+    public UUIDList listOfPlayers = new UUIDList();
     public void onPlayerSleep(PlayerBedEnterEvent event){
         double oldHealth = event.getPlayer().getHealth();
-        if(event.getPlayer().getUniqueId().toString().equals("490a39fc-f7f9-4aab-bb26-81e188bbd8aa")){
+        if(event.getPlayer().getUniqueId().toString().equals(listOfPlayers.OliverUUID)){
             event.getPlayer().damage(1);
             event.getPlayer().setHealth(oldHealth);
         }

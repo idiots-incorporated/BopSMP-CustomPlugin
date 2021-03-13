@@ -11,8 +11,11 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public class Excalibur implements Listener {
-    String mut4noUUID = "5cf118ef-272c-4a42-ae06-a51ec5371060";
-    String buffUUID = "d44e3103-2a77-4181-a846-2790e2c08a6c";
+    UUIDList listOfPlayers = new UUIDList();
+
+    //this is easier im not gonna replace every reference to an uuid in your code
+    String mut4noUUID = listOfPlayers.Mut4noUUID;
+    String buffUUID = listOfPlayers.BuffaloUUID;
     public static int clock;
 
     @EventHandler
