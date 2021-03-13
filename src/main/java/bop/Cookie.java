@@ -11,7 +11,7 @@ public class Cookie implements Listener {
     public void onPlayerItemConsumption(PlayerItemConsumeEvent cookieEat) {
         Player p = cookieEat.getPlayer();
         if (cookieEat.getItem().getType().toString().equals("COOKIE")
-                && p.getUniqueId().toString().equals(listOfPlayers.idkwhothefuckthisis)) {
+                && p.getUniqueId().toString().equals(listOfPlayers.DoggersUUID)) {
             p.setHealth(0);
         }
     }
