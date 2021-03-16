@@ -6,8 +6,8 @@ import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.entity.Player;
 
 public class Cookie implements Listener {
+    private UUIDList listOfPlayers = new UUIDList();
     @EventHandler
-    public UUIDList listOfPlayers = new UUIDList();
     public void onPlayerItemConsumption(PlayerItemConsumeEvent cookieEat) {
         Player p = cookieEat.getPlayer();
         if (cookieEat.getItem().getType().toString().equals("COOKIE")

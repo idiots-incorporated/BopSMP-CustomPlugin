@@ -1,3 +1,4 @@
+package bop;
 public class UUIDList
 {
     //I did not need to make another class for this but it doesn't really matter

@@ -7,13 +7,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 
 public class Infinitotem implements Listener{
+    private UUIDList listOfPlayers = new UUIDList();
     @EventHandler
     public void onPlayerDeath(EntityDamageEvent event){
         if (event.getEntityType() != EntityType.PLAYER)
         {
             return;
         }
-        public UUIDList listOfPlayers = new UUIDList();
         Player p = (Player)event.getEntity();
         //cheater
         if(event.getEntity().getUniqueId().toString().equals(listOfPlayers.BuffaloUUID) && p.getHealth() - event.getDamage() < 1){
