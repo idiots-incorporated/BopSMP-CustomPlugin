@@ -9,14 +9,15 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import com.google.gson.Gson;
+import java.util.UUID;
 
 public class Excalibur implements Listener {
-    UUIDList listOfPlayers = new UUIDList();
-
     //this is easier im not gonna replace every reference to an uuid in your code
-    String mut4noUUID = listOfPlayers.Mut4noUUID;
-    String buffUUID = listOfPlayers.BuffaloUUID;
     public static int clock;
+    Gson gson = new Gson();
+    UUID mut4no = UUIDGrabber.grabUUID("Mut4no");
+    UUID buffalo = UUIDGrabber.grabUUID("RotatingBuffalo");
 
     @EventHandler
     public static void onSwordRightClick(PlayerInteractEvent event) {
